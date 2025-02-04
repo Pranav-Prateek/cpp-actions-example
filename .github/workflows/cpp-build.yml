@@ -1,5 +1,4 @@
-name: C++ Workflow
-
+name: C++ Workflow 
 on:
   push:
     branches:
@@ -11,16 +10,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up C++ environment
-      run: sudo apt-get install g++ make
+      - name: Set up C++ environment
+        run: sudo apt-get update && sudo apt-get install -y g++ make
 
-    - name: Compile C++ code
-      run: g++ -o my_program main1.cpp
+      - name: Compile C++ code
+        run: g++ -o my_program *.cpp  # Compile all C++ files
 
-    - name: Run the C++ program
-      run: ./my_program
+      - name: Set execute permissions
+        run: chmod +x my_program  # Ensure the binary is executable
+
+      - name: Run the C++ program
+        run: ./my_program
