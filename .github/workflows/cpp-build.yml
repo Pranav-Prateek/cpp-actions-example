@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get install g++ make
 
     - name: Compile C++ code
-      run: g++ -o my_program main.cpp
+      run: g++ -o my_program main1.cpp
 
     - name: Run the C++ program
       run: ./my_program
