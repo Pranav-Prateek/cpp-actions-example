@@ -18,7 +18,7 @@ void occurence(int arr[],int n)
 int main()
 {
     int n=5;
-    int a[n]={0,1,2,3,3,1}
+    int a[n]={0,1,2,3,3,1};
     cout<<"The Original Array\n";
     for(int i=0;i<n;i++)
     {
